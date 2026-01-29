@@ -1685,7 +1685,7 @@ Value Search::Worker::qsearch(Position& pos, Stack* ss, Value alpha, Value beta)
             {
                 bestMove = move;
 
-                if (PvNode)  // Update pv even in fail-high case
+                if (PvNode)  // Update pv
                     update_pv(ss->pv, move, (ss + 1)->pv);
 
                 if (value < beta)  // Update alpha here!
